@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BASIC COCOMO</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html"> <h1>COCOMO CALCULATOR</h1> </a>
+    <div class="main-square-blue" style="top:160px ; ">
+        <h2>Basic COCOMO</h2>
+    </div> 
+
+    <div class="input-LOC">
+        <input type="number" id="noLOC" name="noLOC"><br><br>
+        <button class="submit" onclick="basicCo()">Calculate</button>
+    </div>
+   
+    <!-- <div class ="sectiontwo"> -->
+    <h4>How many estimated Thousands lines of code (KLOC)?</h4>
+
+    <table class = "table-basic">
+        <tr>
+          <th> </th>
+          <th>Organic Value</th>
+          <th>SemiDetached Values</th> 
+          <th>Embedded Values</th>
+        </tr>
+        <tr style="color:#355689;height:80px;">
+          <td><b>No. Months Needed</b></td>
+          <td id="orgMon">  </td>
+          <td id="semMon"></td>
+          <td id="embMon"></td>
+        </tr>
+        <tr  style="color:#FCAE30;height:80px;">
+          <td><b>No. Poeple Needed</b></td>
+          <td id="orgPpl">  </td>
+          <td id="semPpl"></td>
+          <td id="embPpl"></td>
+        </tr>
+      </table>
+    <!-- </div> -->
+     
+
+</body>
+</html>

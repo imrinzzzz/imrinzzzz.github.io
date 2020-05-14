@@ -1,0 +1,290 @@
+body {
+    background-color: #F0F0F0;
+    
+  }
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 649px;
+    height: 70px;
+    /* left: 396px; */
+    top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+}
+a{
+  text-decoration: none;
+}
+
+h4 {
+    position: relative;
+    width: 675px;
+    height: 46px;
+    top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+h3{
+    /* position: relative; */
+    width: 222px;
+    height: 41px;
+    /* left: 609px; */
+    top: 192px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #D80027;
+}
+
+h2{
+
+    text-align: center;
+    padding-top: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+ 
+}
+
+.main-square-blue {
+
+    width: 409px;
+    height: 93px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #355689;
+    border-radius: 77px;
+}
+.main-square-green{
+  width: 409px;
+  height: 93px;
+  top: 434px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  background: #54C3A7;
+  border-radius: 77px;
+}
+
+.main-square-red {
+  width: 409px;
+  height: 93px;
+  top: 434px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  background: #CF3B41;
+  border-radius: 77px;
+}
+
+.main-square-yellow {
+  width: 409px;
+  height: 93px;
+  top: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  background: #FCAE30;
+  border-radius: 77px
+}
+
+.input-LOC{
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input {
+  height: 40px;
+  width: 300px;
+  font-size: 30px;
+}
+
+
+.submit {
+  width: 90px;
+  height: 40px;
+  border-radius: 77px;
+  font-size: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.sectiontwo{
+  top:0px
+}
+
+#left-org{
+  position: absolute;
+  width: 151px;
+  height: 28px;
+  left: 209px;
+  top: 521px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.table-basic{
+  position: relative;
+  /* width: 1000px; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 50px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.tablecocomo-type{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.tablecocomo2 {
+  width: 30px;
+}
+
+#h4co2{
+  position: relative;
+  top: 20px;
+}
+
+#h4co22{
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+  size: 20px;
+}
+
+#hdco222-dec{
+  font-family: Roboto;
+  margin-top:0px;
+  color:#CF3B41; 
+}
+
+#firstE{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+
+#h4co222{
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+  size: 20px;
+}
+.rating-choice{
+  width: 10px;
+  
+}
+.rating-table{
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rating-head{
+  text-align: left;
+}
+input[type='radio'] {
+  height: 13px;
+  width: 13px;
+  vertical-align: middle;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
+}
+
+#reuse{
+  margin-top:10px;
+}
+
+.prod-table{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.table-co2{
+  position: relative;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 50px;
+  color: #54C3A7;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  border: 3px solid #54C3A7;
+}

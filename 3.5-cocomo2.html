@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INTERMEDIATE COCOMO</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html"> <h1>COCOMO CALCULATOR</h1> </a>
+    <div class="main-square-red" style="top:160px ; ">
+        <h2>COCOMO II</h2>
+    </div> 
+
+    <div class="input-LOC" style="top:10px;">
+        <h4 id="h4co2">1. Application Composition</h4>
+        <input type="number" id="ObjPoint" name="ObjPoint" placeholder="Object Points Count"><br>
+        <input type="number" id="reuse" name="reuse" placeholder="% Reuse"><br>
+  
+
+    <form>
+        <table class = "prod-table" >
+            <tr >
+                <td class="rating-head">Developers experience or ICASE maturity</td>                    
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="prod"></td>
+                <td>Very Low</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="prod"></td>
+                <td>Low</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="prod" checked></td>
+                <td>Norminal</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="prod"></td>
+                <td>High</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="prod"></td>
+                <td>Very High</td>
+            </tr> 
+        </table>
+    </form>
+
+
+
+    <button class="submit" onclick="co2co1()">Calculate</button>
+
+    <table class = "table-co2">
+        <tr>
+          <th>Estimated Effort</th>
+        </tr>
+        <tr>
+          <td id="PM"> </td>
+        </tr>
+    </table>
+</div>
+
+    <div class="input-LOC" style="top:40px;">
+       <br><br> <p>==========================================================================</p>
+        <h4 id="h4co2">2. Early Design</h4>
+        <input type="number" id="klocco2" name="klocco2" placeholder="KLOC"><br>
+
+
+        <table class= "rating-table">
+            <p id= "hdco222-dec" style="margin-top:20px;"> XL = Extra Low &ensp;&ensp; VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High &ensp;&ensp; VH = Very High &ensp;&ensp; XH = Extra High</p>
+            <tr>
+                <th colspan="2" align="center" id="prod"> 5 Scaling Factors </th>
+            </tr>
+            <tr>
+                <td class="rating-head">Precedentedness </td>  
+                <td></td>   
+                <td></td>                
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="a4"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="a4"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="a4" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="a4"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="a4"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="a4"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">Development Flexibility </td> 
+                <td></td>   
+                <td></td>                     
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="b4"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="b4"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="b4" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="b4"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="b4"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="b4"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">Architecture/Risk Resolution </td>   
+                <td></td>   
+                <td></td>                   
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="c4"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="c4"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="c4" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="c4"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="c4"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="c4"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">Team Cohesion </td>   
+                <td></td>   
+                <td></td>                   
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="d4"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="d4"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="d4" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="d4"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="d4"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="d4"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">Process Maturity </td>  
+                <td></td>   
+                <td></td>                    
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="e4"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="e4"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="e4" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="e4"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="e4"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="e4"></td>
+                <td>XH</td>
+            </tr>
+        
+            <th colspan="2" align="center" id="prod"> 7 Effort Mulitipliers </th>
+            <tr>
+                <td class="rating-head">PERS </td>                
+                <td><input class ="rating-choice" type="radio" id="0" value="0" name="a6"></td>
+                <td>XL</td>           
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="a6"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="a6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="a6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="a6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="a6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="a6"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">RCPX </td>                
+                <td><input class ="rating-choice" type="radio" id="0" value="0" name="b6"></td>
+                <td>XL</td>            
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="b6"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="b6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="b6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="b6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="b6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="b6"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">PDIF </td>    
+                <td></td>   
+                <td></td>  
+                <td></td>   
+                <td></td>              
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="c6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="c6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="c6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="c6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="c6"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">PREX </td>                
+                <td><input class ="rating-choice" type="radio" id="0" value="0" name="d6"></td>
+                <td>XL</td>             
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="d6"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="d6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="d6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="d6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="d6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="d6"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">FCIL </td>                
+                <td><input class ="rating-choice" type="radio" id="0" value="0" name="e6"></td>
+                <td>XL</td>             
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="e6"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="e6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="e6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="e6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="e6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="e6"></td>
+                <td>XH</td>
+            </tr>
+   
+            <tr>
+                <td class="rating-head">RUSE </td>                
+                           
+                <td></td>
+                <td></td>
+                <td></td>   
+                <td></td>  
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="f6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="f6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="f6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="f6"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="f6"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">FCIL </td>                
+                <td></td>
+                <td></td>             
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="g6"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="g6"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="g6" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="g6"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="g6"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+       
+        <button class="submit" onclick="co2co2()">Calculate</button>
+
+        <table class = "table-co2">
+            <tr>
+              <th>B</th>
+              <th>EM</th>
+              <th>PM</th>
+            </tr>
+            <tr>
+              <td id= "B"> </td>
+              <td id= "EM"> </td>
+              <td id= "PM2"> </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="input-LOC" style="top:40px;">
+        <br><br> <p style="margin-top:50px;">==========================================================================</p>
+         <h4 id="h4co2">3. Post Architecture</h4>
+         <input type="number" id="klocco3" name="klocco3" placeholder="KLOC"><br>
+ 
+ 
+         <table class= "rating-table">
+             <p id= "hdco222-dec" style="margin-top:20px;"> VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High &ensp;&ensp; VH = Very High &ensp;&ensp; XH = Extra High</p>
+             <tr>
+                 <th colspan="2" align="center" id="prod"> 5 Scaling Factors </th>
+             </tr>
+             <tr>
+                 <td class="rating-head">Precedentedness </td>               
+                 <td><input class ="rating-choice" type="radio" id="1" value="1" name="a5"></td>
+                 <td>VL</td>
+                 <td><input class ="rating-choice" type="radio" id="2" value="2" name="a5"></td>
+                 <td>L</td>
+                 <td><input class ="rating-choice" type="radio" id="3" value="3" name="a5" checked></td>
+                 <td>N</td>
+                 <td><input class ="rating-choice" type="radio" id="4" value="4" name="a5"></td>
+                 <td>H</td>
+                 <td><input class ="rating-choice" type="radio" id="5" value="5" name="a5"></td>
+                 <td>VH</td>
+                 <td><input class ="rating-choice" type="radio" id="6" value="6" name="a5"></td>
+                 <td>XH</td>
+             </tr>
+             <tr>
+                 <td class="rating-head">Development Flexibility </td>                     
+                 <td><input class ="rating-choice" type="radio" id="1" value="1" name="b5"></td>
+                 <td>VL</td>
+                 <td><input class ="rating-choice" type="radio" id="2" value="2" name="b5"></td>
+                 <td>L</td>
+                 <td><input class ="rating-choice" type="radio" id="3" value="3" name="b5" checked></td>
+                 <td>N</td>
+                 <td><input class ="rating-choice" type="radio" id="4" value="4" name="b5"></td>
+                 <td>H</td>
+                 <td><input class ="rating-choice" type="radio" id="5" value="5" name="b5"></td>
+                 <td>VH</td>
+                 <td><input class ="rating-choice" type="radio" id="6" value="6" name="b5"></td>
+                 <td>XH</td>
+             </tr>
+             <tr>
+                 <td class="rating-head">Architecture/Risk Resolution </td>                 
+                 <td><input class ="rating-choice" type="radio" id="1" value="1" name="c5"></td>
+                 <td>VL</td>
+                 <td><input class ="rating-choice" type="radio" id="2" value="2" name="c5"></td>
+                 <td>L</td>
+                 <td><input class ="rating-choice" type="radio" id="3" value="3" name="c5" checked></td>
+                 <td>N</td>
+                 <td><input class ="rating-choice" type="radio" id="4" value="4" name="c5"></td>
+                 <td>H</td>
+                 <td><input class ="rating-choice" type="radio" id="5" value="5" name="c5"></td>
+                 <td>VH</td>
+                 <td><input class ="rating-choice" type="radio" id="6" value="6" name="c5"></td>
+                 <td>XH</td>
+             </tr>
+             <tr>
+                 <td class="rating-head">Team Cohesion </td>                   
+                 <td><input class ="rating-choice" type="radio" id="1" value="1" name="d5"></td>
+                 <td>VL</td>
+                 <td><input class ="rating-choice" type="radio" id="2" value="2" name="d5"></td>
+                 <td>L</td>
+                 <td><input class ="rating-choice" type="radio" id="3" value="3" name="d5" checked></td>
+                 <td>N</td>
+                 <td><input class ="rating-choice" type="radio" id="4" value="4" name="d5"></td>
+                 <td>H</td>
+                 <td><input class ="rating-choice" type="radio" id="5" value="5" name="d5"></td>
+                 <td>VH</td>
+                 <td><input class ="rating-choice" type="radio" id="6" value="6" name="d5"></td>
+                 <td>XH</td>
+             </tr>
+             <tr>
+                 <td class="rating-head">Process Maturity </td>                   
+                 <td><input class ="rating-choice" type="radio" id="1" value="1" name="e5"></td>
+                 <td>VL</td>
+                 <td><input class ="rating-choice" type="radio" id="2" value="2" name="e5"></td>
+                 <td>L</td>
+                 <td><input class ="rating-choice" type="radio" id="3" value="3" name="e5" checked></td>
+                 <td>N</td>
+                 <td><input class ="rating-choice" type="radio" id="4" value="4" name="e5"></td>
+                 <td>H</td>
+                 <td><input class ="rating-choice" type="radio" id="5" value="5" name="e5"></td>
+                 <td>VH</td>
+                 <td><input class ="rating-choice" type="radio" id="6" value="6" name="e5"></td>
+                 <td>XH</td>
+             </tr>
+         
+             <th colspan="2" align="center" id="prod"> 17 Effort Mulitipliers </th>
+            <tr>
+                <td class="rating-head">RELY </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="a7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="a7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="a7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="a7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="a7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">DATA </td>                
+                        
+                <td></td>
+                <td></td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="b7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="b7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="b7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="b7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">CPLX </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="c7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="c7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="c7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="c7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="c7"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="c7"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">RUSE </td>                
+                        
+                <td></td>
+                <td></td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="d7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="d7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="d7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="d7"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="d7"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">DOCU </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="e7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="e7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="e7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="e7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="e7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">TIME </td>                
+                        
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="f7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="f7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="f7"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="f7"></td>
+                <td>XH</td>
+            </tr>
+
+            <tr>
+                <td class="rating-head">STOR </td>                
+                        
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="g7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="g7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="g7"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="g7"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">PVOL </td>                
+                        
+                <td></td>
+                <td></td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="h7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="h7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="h7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="h7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">ACAP </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="i7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="i7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="i7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="i7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="i7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">PCAP </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="j7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="j7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="j7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="j7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="j7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">PCON </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="k7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="k7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="k7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="k7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="k7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">AEXP </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="l7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="l7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="l7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="l7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="l7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">PEXP </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="m7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="m7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="m7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="m7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="m7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">LTEX </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="n7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="n7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="n7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="n7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="n7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">TOOL </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="o7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="o7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="o7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="o7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="o7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rating-head">SITE </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="p7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="p7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="p7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="p7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="p7"></td>
+                <td>VH</td>
+                <td><input class ="rating-choice" type="radio" id="6" value="6" name="p7"></td>
+                <td>XH</td>
+            </tr>
+            <tr>
+                <td class="rating-head">SCED </td>                
+                        
+                <td><input class ="rating-choice" type="radio" id="1" value="1" name="q7"></td>
+                <td>VL</td>
+                <td><input class ="rating-choice" type="radio" id="2" value="2" name="q7"></td>
+                <td>L</td>
+                <td><input class ="rating-choice" type="radio" id="3" value="3" name="q7" checked></td>
+                <td>N</td>
+                <td><input class ="rating-choice" type="radio" id="4" value="4" name="q7"></td>
+                <td>H</td>
+                <td><input class ="rating-choice" type="radio" id="5" value="5" name="q7"></td>
+                <td>VH</td>
+                <td></td>
+                <td></td>
+            </tr>
+         </table>
+
+         <button class="submit" onclick="co2co3()">Calculate</button>
+
+         <table class = "table-co2">
+            <tr>
+              <th>B</th>
+              <th>EM</th>
+              <th>PM</th>
+            </tr>
+            <tr>
+              <td id= "B3"> </td>
+              <td id= "EM3"> </td>
+              <td id= "PM3"> </td>
+            </tr>
+        </table>
+
+         
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+

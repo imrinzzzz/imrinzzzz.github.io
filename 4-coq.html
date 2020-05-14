@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>COCOMO COQUALMO</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a href="index.html">
+        <h1>COCOMO CALCULATOR</h1>
+    </a>
+    <div class="main-square-yellow" style="top:160px ; ">
+        <h2>COQUALMO</h2>
+    </div>
+
+    <h4 id="h4co2">1. How many estimated Thousands lines of code (KLOC)?</h4>
+    <div class="input-LOC" style="top:0px;">
+        <input type="number" id="noLOC3" name="noLOC2"><br>
+
+        <form>
+            <table class="rating-table">
+                <h4 id="h4co222">2.1 DI-Driver : Requirement</h4>
+                <p id="hdco222-dec"> VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High
+                    &ensp;&ensp; VH = Very High </p>
+
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Platform Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Software Reliability (RELY) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.43" name="rely1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="rely1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="rely1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="rely1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="rely1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Database Size (DATA) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.43" name="data1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="data1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="data1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="data1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="data1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Reusability (RUSE) </td>
+
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="ruse1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.02" name="ruse1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.02" name="ruse1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Documentation Match to Life-Cycle Needs (DOCU) </td>
+                    <td><input class="rating-choice" type="radio" value="1.16" name="docu1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.08" name="docu1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="docu1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="docu1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.86" name="docu1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Product Complexity (CPLX) </td>
+                    <td><input class="rating-choice" type="radio" value="0.76" name="cplx1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="cplx1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="cplx1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="cplx1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.15" name="cplx1"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="prod"> Product Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Time Constrant (TIME) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="time1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.03" name="time1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.04" name="time1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Main Storage Constraint (STOR) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="stor1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.03" name="stor1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.04" name="stor1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Volatility (PVOL) </td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.86" name="pvol1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pvol1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.08" name="pvol1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.16" name="pvol1"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="pers"> Personnel Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Analyst Capability (ACAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.33" name="acap1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.15" name="acap1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="acap1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="acap1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.75" name="acap1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programmer Capability (PCAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Applications Experience (AEXP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.22" name="aexp1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="aexp1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="aexp1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="aexp1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.82" name="aexp1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Experience (PEXP) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.11" name="pexp1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.05" name="pexp1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pexp1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="pexp1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.90" name="pexp1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programming Language and Tool Experience (LTEX) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.07" name="ltex1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.03" name="ltex1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ltex1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.96" name="ltex1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="ltex1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Personnel Continuity (PCON) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.22" name="pcon1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="pcon1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcon1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="pcon1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.82" name="pcon1"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="proj"> Project Attributes </th>
+                </tr>
+
+                <tr class="rating-head">
+                    <td> Use of Software Tools (TOOL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="tool1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.04" name="tool1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="tool1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.96" name="tool1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="tool1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Multisite Development (SITE) </td>
+                    <td><input class="rating-choice" type="radio" value="1.20" name="site1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="site1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="site1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.94" name="site1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="site1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Required Development Schedule (SCED) </td>
+                    <td><input class="rating-choice" type="radio" value="1.18" name="sced1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="sced1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="sced1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="sced1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="sced1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Disciplined MEthods (DISC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.58" name="disc1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.26" name="disc1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="disc1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.79" name="disc1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.63" name="disc1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Precedentedness (PREC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.43" name="prec1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="prec1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="prec1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="prec1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.89" name="prec1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Architecture/Risk Resolution (RESL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.32" name="resl1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.15" name="resl1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="resl1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="resl1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="resl1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Team Cohesion (TEAM) </td>
+                    <td><input class="rating-choice" type="radio" value="1.34" name="team1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.16" name="team1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="team1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="team1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="team1"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Process Maturity (PMAT) </td>
+                    <td><input class="rating-choice" type="radio" value="1.38" name="pmat1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.17" name="pmat1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pmat1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.90" name="pmat1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="pmat1"></td>
+                    <td>VH</td>
+                </tr>
+            </table>
+
+            <table class="rating-table">
+                <h4 id="h4co222">2.2 DI-Driver : Design</h4>
+                <p id="hdco222-dec"> VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High
+                    &ensp;&ensp; VH = Very High </p>
+
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Platform Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Software Reliability (RELY) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.45" name="rely2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="rely2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="rely2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="rely2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.69" name="rely2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Database Size (DATA) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.45" name="data2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="data2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="data2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="data2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.69" name="data2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Reusability (RUSE) </td>
+
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.98" name="ruse2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.02" name="ruse2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Documentation Match to Life-Cycle Needs (DOCU) </td>
+                    <td><input class="rating-choice" type="radio" value="1.18" name="docu2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="docu2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="docu2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="docu2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="docu2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Product Complexity (CPLX) </td>
+                    <td><input class="rating-choice" type="radio" value="0.71" name="cplx2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="cplx2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="cplx2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.12" name="cplx2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.19" name="cplx2"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="prod"> Product Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Time Constrant (TIME) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="time2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.06" name="time2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="time2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Main Storage Constraint (STOR) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="stor2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.06" name="stor2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="stor2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Volatility (PVOL) </td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="pvol2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pvol2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.11" name="pvol2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.20" name="pvol2"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="pers"> Personnel Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Analyst Capability (ACAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.20" name="acap2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="acap2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="acap2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="acap2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="acap2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programmer Capability (PCAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.17" name="pcap2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.08" name="pcap2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="pcap2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="pcap2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Applications Experience (AEXP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.22" name="aexp2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="aexp2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="aexp2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="aexp2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.82" name="aexp2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Experience (PEXP) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.17" name="pexp2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.08" name="pexp2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pexp2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="pexp2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.86" name="pexp2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programming Language and Tool Experience (LTEX) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.13" name="ltex2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.06" name="ltex2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ltex2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.94" name="ltex2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.88" name="ltex2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Personnel Continuity (PCON) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.25" name="pcon2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.12" name="pcon2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcon2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.89" name="pcon2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.80" name="pcon2"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="proj"> Project Attributes </th>
+                </tr>
+
+                <tr class="rating-head">
+                    <td> Use of Software Tools (TOOL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="tool2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.05" name="tool2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="tool2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="tool2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="tool2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Multisite Development (SITE) </td>
+                    <td><input class="rating-choice" type="radio" value="1.20" name="site2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="site2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="site2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.94" name="site2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="site2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Required Development Schedule (SCED) </td>
+                    <td><input class="rating-choice" type="radio" value="1.19" name="sced2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="sced2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="sced2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="sced2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="sced2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Disciplined MEthods (DISC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.67" name="disc2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.29" name="disc2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="disc2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.77" name="disc2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.60" name="disc2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Precedentedness (PREC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.34" name="prec2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.16" name="prec2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="prec2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="prec2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="prec2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Architecture/Risk Resolution (RESL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.43" name="resl2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="resl2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="resl2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.89" name="resl2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="resl2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Team Cohesion (TEAM) </td>
+                    <td><input class="rating-choice" type="radio" value="1.26" name="team2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.12" name="team2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="team2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="team2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.9" name="team2"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Process Maturity (PMAT) </td>
+                    <td><input class="rating-choice" type="radio" value="1.65" name="pmat2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.28" name="pmat2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pmat2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="pmat2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.78" name="pmat2"></td>
+                    <td>VH</td>
+                </tr>
+            </table>
+
+            <table class="rating-table">
+                <h4 id="h4co222">2.3 DI-Driver : Coding</h4>
+                <p id="hdco222-dec"> VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High
+                    &ensp;&ensp; VH = Very High </p>
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Platform Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Software Reliability (RELY) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.45" name="rely3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="rely3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="rely3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="rely3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.69" name="rely3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Database Size (DATA) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.45" name="data3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.2" name="data3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="data3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="data3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.69" name="data3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Required Reusability (RUSE) </td>
+
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.98" name="ruse3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ruse3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Documentation Match to Life-Cycle Needs (DOCU) </td>
+                    <td><input class="rating-choice" type="radio" value="1.18" name="docu3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="docu3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="docu3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="docu3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.85" name="docu3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Product Complexity (CPLX) </td>
+                    <td><input class="rating-choice" type="radio" value="0.71" name="cplx3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="cplx3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="cplx3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.12" name="cplx3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.19" name="cplx3"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="prod"> Product Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Time Constrant (TIME) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="time3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.06" name="time3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="time3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Main Storage Constraint (STOR) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="stor3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.05" name="stor3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.07" name="stor3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Volatility (PVOL) </td>
+                    <td></td>
+                    <td></td>
+                    <td><input class="rating-choice" type="radio" value="0.82" name="pvol3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pvol3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="pvol3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="1.22" name="pvol3"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="pers"> Personnel Attributes </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Analyst Capability (ACAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.11" name="acap3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.05" name="acap3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="acap3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="acap3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.90" name="acap3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programmer Capability (PCAP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.32" name="pcap3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.15" name="pcap3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcap3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.87" name="pcap3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.76" name="pcap3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Applications Experience (AEXP) </td>
+                    <td><input class="rating-choice" type="radio" value="1.13" name="aexp3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.06" name="aexp3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="aexp3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.94" name="aexp3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.88" name="aexp3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Platform Experience (PEXP) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.16" name="pexp3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.08" name="pexp3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pexp3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="pexp3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.86" name="pexp3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Programming Language and Tool Experience (LTEX) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.22" name="ltex3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.10" name="ltex3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="ltex3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.91" name="ltex3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.82" name="ltex3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Personnel Continuity (PCON) </td>
+
+                    <td><input class="rating-choice" type="radio" value="1.30" name="pcon3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.14" name="pcon3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pcon3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.88" name="pcon3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.77" name="pcon3"></td>
+                    <td>VH</td>
+                </tr>
+
+                <!-- ================================================================================ -->
+
+                <tr>
+                    <th colspan="2" align="center" id="proj"> Project Attributes </th>
+                </tr>
+
+                <tr class="rating-head">
+                    <td> Use of Software Tools (TOOL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.25" name="tool3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.12" name="tool3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="tool3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.89" name="tool3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.80" name="tool3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Multisite Development (SITE) </td>
+                    <td><input class="rating-choice" type="radio" value="1.18" name="site3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="site3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="site3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="site3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="site3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Required Development Schedule (SCED) </td>
+                    <td><input class="rating-choice" type="radio" value="1.19" name="sced3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="sced3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="sced3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="sced3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="sced3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Disciplined MEthods (DISC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.84" name="disc3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.36" name="disc3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="disc3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.73" name="disc3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.54" name="disc3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Precedentedness (PREC) </td>
+                    <td><input class="rating-choice" type="radio" value="1.24" name="prec3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.11" name="prec3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="prec3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.93" name="prec3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.9" name="prec3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Architecture/Risk Resolution (RESL) </td>
+                    <td><input class="rating-choice" type="radio" value="1.41" name="resl3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.19" name="resl3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="resl3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.89" name="resl3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.84" name="resl3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Team Cohesion (TEAM) </td>
+                    <td><input class="rating-choice" type="radio" value="1.18" name="team3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.09" name="team3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="team3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.95" name="team3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.92" name="team3"></td>
+                    <td>VH</td>
+                </tr>
+                <tr class="rating-head">
+                    <td> Process Maturity (PMAT) </td>
+                    <td><input class="rating-choice" type="radio" value="1.58" name="pmat3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="1.26" name="pmat3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="1.0" name="pmat3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.86" name="pmat3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.79" name="pmat3"></td>
+                    <td>VH</td>
+                </tr>
+            </table>
+        </form>
+        <button class="submit" onclick="cqm()">Calculate</button>
+
+
+        <table class="table-basic">
+            <tr>
+                <th>The Total Number of Defects Introduced</th>
+            </tr>
+            <tr style="color:#355689;height:80px;">
+                <td id="DI"></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <form>
+            <table class="rating-table">
+                <h4 id="h4co222">3 Defect Removal</h4>
+                <p id="hdco222-dec"> VL = Very Low &ensp;&ensp; L = Low &ensp;&ensp; N = Nominal &ensp;&ensp; H = High
+                    &ensp;&ensp; VH = Very High &ensp;&ensp; XH = Extra High</p>
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Requirement </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Automated Analysis DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="auto1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.00" name="auto1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.10" name="auto1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.27" name="auto1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.34" name="auto1"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.40" name="auto1"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> People Reviews DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="ppl1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.25" name="ppl1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.40" name="ppl1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.50" name="ppl1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.58" name="ppl1"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="ppl1"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Testing and Tools DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="test1"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.23" name="test1"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.40" name="test1" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.50" name="test1"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.57" name="test1"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.60" name="test1"></td>
+                    <td>EH</td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Design </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Automated Analysis DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="auto2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.00" name="auto2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.13" name="auto2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.28" name="auto2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.44" name="auto2"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.50" name="auto2"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> People Reviews DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="ppl2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.28" name="ppl2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.40" name="ppl2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.54" name="ppl2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="ppl2"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.78" name="ppl2"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Testing and Tools DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="test2"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.23" name="test2"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.43" name="test2" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.54" name="test2"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.65" name="test2"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.70" name="test2"></td>
+                    <td>EH</td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" align="center" id="comp"> Coding </th>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Automated Analysis DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="auto3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.10" name="auto3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.20" name="auto3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.30" name="auto3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.48" name="auto3"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.55" name="auto3"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> People Reviews DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="ppl3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.30" name="ppl3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.48" name="ppl3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.60" name="ppl3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.73" name="ppl3"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.83" name="ppl3"></td>
+                    <td>EH</td>
+                </tr>
+                <tr>
+                    <td class="rating-head"> Execution Testing and Tools DRF </td>
+
+                    <td><input class="rating-choice" type="radio" value="0.00" name="test3"></td>
+                    <td>VL</td>
+                    <td><input class="rating-choice" type="radio" value="0.38" name="test3"></td>
+                    <td>L</td>
+                    <td><input class="rating-choice" type="radio" value="0.58" name="test3" checked></td>
+                    <td>N</td>
+                    <td><input class="rating-choice" type="radio" value="0.69" name="test3"></td>
+                    <td>H</td>
+                    <td><input class="rating-choice" type="radio" value="0.78" name="test3"></td>
+                    <td>VH</td>
+                    <td><input class="rating-choice" type="radio" value="0.88" name="test3"></td>
+                    <td>EH</td>
+                </tr>
+            </table>
+        </form>
+        <button class="submit" onclick="cqm2()">Calculate</button>
+
+
+        <table class="table-basic">
+            <tr>
+                <th>Estimated Number of Residual Defects (DRes/kSLOC)</th>
+            </tr>
+            <tr style="color:#355689;height:80px;">
+                <td id="DR"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <br><br><br><br>
+</body>
+
+</html>
